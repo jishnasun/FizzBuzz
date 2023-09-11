@@ -5,30 +5,42 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i < 100; i++) {
+        //for (int i = 1; i < 100; i++) {
+            // for loop: i is an integer that equals 1, and increases by 1 each iteration
+
+        int i = 1;
+
+        while (i < 100) {
 
             // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+            doFizzBuzz(i);
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
+            i++;
 
-                System.out.println("Fizz Buzz");
+        }
+    }
 
-            } else if (divisibleBy3) {
+    private static void doFizzBuzz(int i) {
+        boolean divisibleBy3 = i % 3 == 0;  // seem to define what type of object the variable
+        boolean divisibleBy5 = i % 5 == 0;  // has before variable name in order to define it
 
-                System.out.println("Fizz");
+        // Print our appropriate result.
+        if (divisibleBy3 && divisibleBy5) {  // {&&} is the equivalent of {and}
 
-            } else if (divisibleBy5) {
+            System.out.println("Fizz Buzz"); // all lines (i.e. functions calls) end with semicolon
 
-                System.out.println("Buzz");
+        } else if (divisibleBy3) {  // opening and closing brackets instead of merely indenting
 
-            } else {
+            System.out.println("Fizz");
 
-                System.out.println(i);
+        } else if (divisibleBy5) {
 
-            }
+            System.out.println("Buzz");
+
+        } else {
+
+            System.out.println(i);
+
         }
     }
 }
