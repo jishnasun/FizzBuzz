@@ -1,5 +1,5 @@
 public class Multiples {
-    public static void main(int under) {
+    public static int main(int under) {
         int result = 0;
 
         for (int i = 1; i < under; i++) {
@@ -10,6 +10,20 @@ public class Multiples {
                 result++;
             }
         }
-        System.out.println(result);
+        return result;
+    }
+
+    public static int main(int a, int b, int n) {
+        int result = 0;
+
+        for (int i = 1; i < n; i++) {
+            boolean divisibleByA = i % a == 0;
+            boolean divisibleByB = i % b == 0;
+
+            if (divisibleByA || divisibleByB) {
+                result++;
+            }
+        }
+        return result;
     }
 }
